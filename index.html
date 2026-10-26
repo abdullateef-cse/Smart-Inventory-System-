@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHOOLINI UNIVERSITY | Central Inventory</title>
+    <meta
+      name="description"
+      content="Centralized Procurement & Digital Inventory Management System for a large university."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+  </head>
+  <body>
+    <main id="loginRoot" class="login-root"></main>
+    <div class="app-shell hidden" id="appShell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand">
+          <img class="brand-logo" src="assets/shoolini-logo.svg" alt="Shoolini University" />
+          <div class="brand-copy">
+            <small>Central Inventory</small>
+          </div>
+        </div>
+
+        <nav id="sidebarNav" aria-label="Main navigation"></nav>
+
+        <div class="sidebar-footer">
+          <div class="user-chip">
+            <div class="avatar avatar-large" id="sidebarAvatar">IA</div>
+            <div>
+              <strong id="sidebarName">Inventory Administrator</strong>
+              <small id="sidebarRole">SUPER ADMIN</small>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="main-panel">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="icon-button mobile-only" id="mobileSidebarToggle" aria-label="Toggle menu">
+              <i data-lucide="menu"></i>
+            </button>
+            <button class="icon-button desktop-only" id="sidebarToggle" aria-label="Collapse sidebar">
+              <i data-lucide="panel-left-close"></i>
+            </button>
+            <div>
+              <p class="eyebrow">Operations Overview</p>
+              <h2 id="pageTitle">Dashboard</h2>
+            </div>
+          </div>
+
+          <div class="topbar-actions">
+            <label class="global-search" aria-label="Global Search">
+              <i data-lucide="search"></i>
+              <input id="globalSearchInput" type="search" placeholder="Search asset, department, person, vendor..." />
+            </label>
+
+            <button class="icon-button" id="notificationBtn" aria-label="Notifications">
+              <i data-lucide="bell"></i>
+              <span class="badge">3</span>
+            </button>
+
+            <button class="icon-button" id="helpBtn" aria-label="Help">
+              <i data-lucide="circle-help"></i>
+            </button>
+
+            <div class="profile-pill">
+              <div class="avatar" id="profileAvatar">IA</div>
+              <div class="profile-meta">
+                <strong id="profileName">Inventory Administrator</strong>
+                <small id="profileRole">SUPER ADMIN</small>
+              </div>
+            </div>
+            <button id="logoutBtn" class="ghost-button logout-button" type="button"><i data-lucide="log-out"></i> Log out</button>
+            <div class="date-pill" id="currentDate">30 Sep 2026</div>
+          </div>
+        </header>
+
+        <main class="page-content" id="pageContent"></main>
+      </div>
+    </div>
+
+    <div class="modal-backdrop hidden" id="requestModalBackdrop">
+      <div class="modal-card" id="requestModalContent"></div>
+    </div>
+
+    <div class="drawer-backdrop hidden" id="assetDrawerBackdrop">
+      <aside class="asset-drawer" id="assetDrawerContent"></aside>
+    </div>
+
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/workflow.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/inventory.js"></script>
+    <script src="js/procurement.js"></script>
+    <script src="js/issue-return.js"></script>
+    <script src="js/surveillance.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 142" role="img" aria-labelledby="title">
+  <title id="title">Shoolini University</title>
+  <g fill="none" stroke-linecap="round" stroke-width="4">
+    <path d="M32 8C13 24 48 39 29 55S49 85 29 101s14 26 0 34" stroke="#214a9e"/>
+    <path d="M18 8c19 16-16 31 3 47S1 85 21 101 7 127 21 135" stroke="#3164bd"/>
+    <path d="M24 16h13M18 30h17M19 44h13M24 58h13M18 72h17M19 86h13M24 100h13M18 114h17M19 128h13" stroke="#214a9e" stroke-width="3"/>
+  </g>
+  <g fill="#ed174c" font-family="Arial, Helvetica, sans-serif" font-weight="700">
+    <text x="58" y="67" font-size="54">Shoolini</text>
+    <text x="58" y="123" font-size="48">University</text>
+  </g>
+</svg>
